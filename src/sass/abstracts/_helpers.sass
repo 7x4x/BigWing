@@ -1,0 +1,28 @@
+.sm-only
+  @include media(sm)
+    display: none !important
+
+.md-none
+  @include media(md, max)
+    display: none !important
+
+.sm-none
+  @include media(sm, max)
+    display: none !important
+
+.sm-center
+  @include media(sm, max)
+    text-align: center
+
+.sm-full-width
+  @include media(sm, max)
+    width: 100% !important
+
+
+.select-none
+  user-select: none
+
+.flex-center
+  display: flex
+  align-items: center
+  justify-content: center

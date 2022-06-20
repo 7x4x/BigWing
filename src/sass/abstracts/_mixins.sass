@@ -1,0 +1,19 @@
+@mixin media($size, $type: min)
+  @if $size == sm
+    @media (#{$type}-width: 768px)
+      @content
+  @else if $size == md
+    @media (#{$type}-width: 992px)
+      @content
+  @else if $size == lg
+    @media (#{$type}-width: 1200px)
+      @content
+  @else if $size == xl
+    @media (#{$type}-width: 1280px)
+      @content
+  @else if $size == 2xl
+    @media (#{$type}-width: 1536px)
+      @content
+  @else 
+    @media (#{$type}-width: $size)
+      @content

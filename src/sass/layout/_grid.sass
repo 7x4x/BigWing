@@ -1,0 +1,26 @@
+.container
+  margin: auto
+  position: relative
+  padding:
+    left: 15px
+    right: 15px
+  @include media(sm)
+    width: 750px
+  @include media(md)
+    width: 970px
+  @include media(lg)
+    width: 1170px
+
+@for $i from 1 through 12
+  .col-lg-#{$i}
+    @include media(lg)
+      width: calc(100% * $i / 12 )
+  .col-lg-#{$i}
+    @include media(lg, max)
+      width: calc(100% * $i / 12 )
+  .col-md-#{$i}
+    @include media(md, max)
+      width: calc(100% * $i / 12 )
+  .col-sm-#{$i}
+    @include media(sm, max)
+      width: calc(100% * $i / 12 )

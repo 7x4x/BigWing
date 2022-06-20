@@ -1,0 +1,9 @@
+header
+  .container
+    .logo BigWing
+    i.toggler.sm-only.fa-solid.fa-bars
+    nav
+      ul
+        each link in ["home", "about", "services", "contact", "login"]
+          li: a(href= "#" + link) #{link}
+        li: i.fa-solid.fa-magnifying-glass

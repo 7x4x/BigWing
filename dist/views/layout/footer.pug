@@ -1,0 +1,31 @@
+footer
+  .container
+    h1 bigwing
+    .links
+      each heading in ["Useful Link", "The Services", "Contact Us"]
+        .column.col-lg-4.col-md-6.col-sm-12
+          h2 #{heading}
+          .content
+            ul.col-lg-6
+              li About Us
+              li About services
+              li About Departments
+              li Services
+              li Contact Us
+            ul.col-lg-6
+              li Loram ipusm
+              li Loram ipusm
+              li Loram ipusm
+              li Loram ipusm
+              li Loram ipusm
+    .social-media
+      .icons
+        i.fa-brands.fa-facebook-f.flex-center
+        i.fa-brands.fa-twitter.flex-center
+        i.fa-brands.fa-linkedin-in.flex-center
+        i.fa-brands.fa-instagram.flex-center
+      .subscribe
+        span NEWSLETTER
+        input(type="text" placeholder="Enter Your email")
+        a subscribe
+    p © #{new Date().getFullYear()} All Rights Reserved By Html Design

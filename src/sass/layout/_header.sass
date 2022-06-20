@@ -1,0 +1,54 @@
+header
+  @include media(sm, max)
+    padding: 20px 0 10px
+  padding: 20px 0
+  .container
+    @include media(875px, max)
+      gap: $sm-header-gap
+    @include media(sm, max)
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: 0
+    display: flex
+    gap: $header-gap
+    align-items: center
+    *
+      color: $main-color
+      text-transform: uppercase
+    .logo
+      @include media(sm, max)
+        font-size: 25px
+      font-size: 20px
+      font-weight: 700
+      cursor: pointer
+    nav
+      @include media(sm, max)
+        overflow: hidden
+        transition: $nav-transition
+        max-height: 0
+        width: 100%
+      ul
+        @include media(875px, max)
+          gap: $sm-header-gap
+        @include media(sm, max)
+          flex-direction: column
+          gap: 5px
+          align-items: center
+          margin-top: 8px
+        display: flex
+        gap: $header-gap
+        li
+          @include media(sm, max)
+            font-size: 1.2rem
+          *
+            transition: $main-transition
+          i
+            @include media(sm, max)
+              font-size: 1.6rem
+            cursor: pointer
+            font-size: 20px
+          padding: 10px 0
+          a:hover, i:hover
+            color: $hover-color
+    .toggler
+      font-size: 35px

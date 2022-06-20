@@ -1,0 +1,260 @@
+.hero-area
+  height: 94vh
+  @include media(md, max)
+    height: auto
+  background: $main-gradient
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    background:
+      image: url("/assets/images/hero-bg.png")
+      size: 100% 100%
+      repeat: no-repeat
+    height: 86%
+    width: 58%
+    top: 25px
+    right: 0
+    @include media(md, max)
+      display: none
+  .slider
+    height: 90%
+    overflow: hidden
+    .slides
+      display: flex
+      height: 100%
+      transition: $slider-transition
+      .slide
+        overflow: hidden
+        width: 100vw
+        display: flex
+        .container
+          @include media(sm, max)
+            flex-direction: column
+          *
+            color: $main-color
+          display: flex
+          justify-content: space-between
+          align-items: center
+          .text
+            @include media(md)
+              width: 42%
+            @include media(md, max)
+              width: 50%
+            margin-bottom: 80px
+            h1
+              font-size: 2.5rem
+            p
+              line-height: 1.6
+              margin:
+                top: 40px
+                bottom: 40px
+          .img
+            @include media(sm, max)
+              max-width: 85%
+            max-width: 50%
+            position: relative
+            img
+              @include media(sm, max)
+                right: 0
+              width: 75%
+              right: -50px
+              top: -25px
+              position: relative
+            &::before
+              @include media(sm, max)
+                left: -10px
+              @include media(md, max)
+                content: ""
+              position: absolute
+              background:
+                image: url("/assets/images/hero-bg.png")
+                size: cover
+                repeat: no-repeat
+              width: 110%
+              height: 135%
+              bottom: 0
+              left: 0
+    .curent
+      width: $slider-btn-size
+      height: $slider-btn-size
+      background-color: $slider-curent-btn
+      border-radius: 50%
+      position: absolute
+      color: $main-color
+      bottom: 11%
+      right: 48%
+      cursor: pointer
+    .control
+      position: absolute
+      gap: 10px
+      bottom: - calc($slider-btn-size / 2)
+      left: 2%
+      .next , .prev
+        cursor: pointer
+        width: $slider-btn-size
+        height: $slider-btn-size
+        border-radius: 50%
+        background-color: $slider-control-btn
+        &:hover
+          background-color: $buttons-color
+
+.welcome
+  padding: 75px 0
+  .container
+    text-align: center
+    .content
+      padding: 45px 0
+      img
+        max-width: 100%
+      p
+        margin-top: 30px
+        line-height: 1.7
+      a
+        margin-top: 30px
+
+.services
+  @include media(lg, max)
+    padding-bottom: 190px
+  @include media(sm, max)
+    padding-top: 390px
+    background-position: bottom
+    margin-top: -325px
+  background:
+    image: url("/assets/images/service-bg.png")
+    size: cover
+  padding:
+    top: 275px
+    bottom: 150px
+  margin-top: -150px
+  .container
+    text-align: center
+    .content
+      @include media(320px, max)
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+      padding: 45px 0
+      display: grid
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+      grid-gap: 30px
+      .box
+        *
+          color: $main-color
+        .image
+          img
+            border-radius: 18px
+            max-width: 100%
+        .text
+          h2
+            margin-bottom: 0
+          p
+            margin-top: 10px
+            line-height: 1.6
+
+.problem
+  @extend .welcome
+  padding: 75px 0 40px
+
+.why-us
+  padding: 70px 0 35px
+  background:
+    image: $why-us-section-gradient
+  .container
+    text-align: center
+    *
+      color: $main-color
+    p
+      margin: 50px auto
+      line-height: 1.6
+    .icons
+      @include media(sm, max)
+        font-size: 14px
+      display: flex
+      flex-flow: row wrap
+      .icon
+        display: flex
+        align-items: center
+        padding: 0 15px
+        margin: 20px auto
+        min-width: min-content
+        .text
+          text-align: start
+          h3, h6
+            font-weight: 500
+            padding: 0
+            margin: 0
+          h3
+            margin-bottom: 12px
+            font-size: 1.75em
+          h6
+            font-size: 1em
+        .image
+          max-width: 45px
+          min-width: 30px
+          margin-right: 20px
+          img
+            max-width: 100%
+
+.client
+  overflow: hidden
+  padding: 75px 0
+  > .container
+    h1
+      border: none
+  .slides
+    transition: $slider-transition
+    display: flex
+    .slide
+      width: 100vw
+      .content
+        @include media(sm, max)
+          width: 90%
+        padding: 45px 0
+        width: 55%
+        margin: 0 auto
+        .text
+          padding: 30px
+          border: 1px solid #bcbcbc
+          line-height: 1.6
+        .image
+          margin-top: 25px
+          display: flex
+          align-items: center
+          .img
+            width: 75px
+            margin-right: 15px
+            img
+              border: 10px solid #9852f2
+              border-radius: 50%
+              min-width: 55px
+          .info
+            h5
+              font-weight: 500
+              font-size: 1.25rem
+              margin: 0 0 12px
+  .next-button , .prev-button
+    position: absolute
+    background-color: $slider-control-btn
+    width: $slider-btn-size
+    height: $slider-btn-size
+    border-radius: 50%
+    cursor: pointer
+    top: -265px
+    &:hover
+      background-color: $buttons-color
+    @include media(md, max)
+      top: -300px
+  .next-button
+    right: 0
+
+.contact
+  padding: 75px 0
+  .container
+    text-align: center
+    > h1
+      border: none
+    form
+      margin-bottom: 50px
+    a
+      @extend .main-button
+      background-color: #a053f9
+      border-radius: 5px

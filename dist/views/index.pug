@@ -1,0 +1,142 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+    link(rel="stylesheet" href="/assets/css/main.min.css")
+    title Big Wing
+  body
+    // Start Hero Section
+    section.hero-area
+      include layout/header
+      section.slider
+        .slides
+          - for (let i = 0; i < 3; i++)
+            .slide
+              .container.sm-center
+                .text.sm-full-width
+                  h1 Start #[br] Business with #[br] Our Company
+                  p sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                  a.main-button read more
+                .img: img(src="assets/images/slider-img.png")
+        .curent.select-none.flex-center.md-none 01
+        .control.select-none.flex-center.md-none
+          .prev.flex-center: img(src="/assets/images/prev.png")
+          .next.flex-center: img(src="/assets/images/next.png")
+    // End Hero Section
+    // Start Welcome Section
+    section.welcome
+      .container
+        h1.main-heading Welcome To Our Company
+        .content
+          img(src="/assets/images/welcome.png")
+          p dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duisaute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          a.main-button read more
+    // End Welcome Section
+    // Start Services Section
+    section.services#services
+      .container
+        h1._main-heading Our Services
+        .content
+          .box
+            .image
+              img(src="/assets/images/s-1.jpg")
+            .text
+              h2 Business #[br] Consultant
+              p have suffered alteration in some form, by injected humour, or randomised words which don't look evenslightly believable. If you are
+          .box
+            .image
+              img(src="/assets/images/s-2.jpg")
+            .text
+              h2 Marketing #[br] Analytics
+              p have suffered alteration in some form, by injected humour, or randomised words which don't look evenslightly believable. If you are
+          .box
+            .image
+              img(src="/assets/images/s-3.jpg")
+            .text
+              h2 Financial #[br] Planning
+              p have suffered alteration in some form, by injected humour, or randomised words which don't look evenslightly believable. If you are
+        a.main-button read more
+    // End Services Section
+    // Start Problem Section
+    section.problem
+      .container
+        h1.main-heading Do you have any business problem ?
+        .content
+          img(src="/assets/images/problem.jpg")
+          p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration insome form, by injected humour, or randomised words which don't look even slightly believable. I
+          a.main-button read more
+    // End Problem Section
+    // Start Why Us Section
+    section.why-us
+      .container
+        h1._main-heading Why Choose Us
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua. Ut enim ad minim veniam, quis
+        .icons
+          .icon.col-lg-3.col-md-6
+            .image: img(src="/assets/images/smiley.png")
+            .text 
+              h3 99%
+              h6 SATISFIED CLIENTS
+          .icon.col-lg-3.col-md-6
+            .image: img(src="/assets/images/monitor.png")
+            .text 
+              h3 4700+
+              h6 AWESOME planing
+          .icon.col-lg-3.col-md-6
+            .image: img(src="/assets/images/multiple-users-silhouette.png")
+            .text 
+              h3 4500+
+              h6 CLIENTS
+          .icon.col-lg-3.col-md-6
+            .image: img(src="/assets/images/bar-chart.png")
+            .text 
+              h3 19000+
+              h6 DAILY business
+    // End Why Section
+    // Start Client Section
+    section.client
+      .container
+        h1.main-heading What Our Clients Says
+      .slides
+        - for (let i = 0; i < 3; i++)
+          .slide
+            .container
+              .content
+                .text psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloremagnaaliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                .image
+                  .img                
+                    img(src="/assets/images/client.png")
+                  .info
+                   h5 Joans Mark
+                   span CAL
+      .container
+        .prev-button.flex-center.select-none.sm-none: img(src="/assets/images/prev.png")
+        .next-button.flex-center.select-none.sm-none: img(src="/assets/images/next.png")
+    // End Client Section
+    // Start Contact Section
+    section.contact#contact
+      .container
+        h1.main-heading Contact Us
+        p psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        form.main-form
+          .form-input.col-lg-6.col-sm-12
+            label Name 
+            input(type="text")
+          .form-input.col-lg-6.col-sm-12
+            label Email 
+            input(type="text")
+          .form-input.col-lg-6.col-sm-12
+            label Phone Number 
+            input(type="text")
+          .form-input.col-lg-6.col-sm-12
+            label Select Service
+            select
+              option(selected)
+              option ...
+          .form-input.col-lg-12
+            label Message
+            input.text-area(type="text")
+        a Send
+    // End Contact Section
+    include layout/footer
+    script(src="/assets/js/main.min.js")

@@ -1,0 +1,27 @@
+.main-form
+  display: flex
+  flex-wrap: wrap
+  .form-input
+    display: flex
+    flex-direction: column
+    row-gap: 12px
+    margin-top: 15px
+    label
+      text-align: start
+    input, select
+      @include media(sm, max)
+        margin: 0
+      padding: .375rem .75rem
+      border: none
+      background-color: $input-color
+      outline: none
+      margin-right: 15px
+      height: 50px
+    input.text-area
+      height: 120px
+    select
+      appearance: none
+      background:
+        image: url(../images/down-arrow.png)
+        repeat: no-repeat
+        position: 98%

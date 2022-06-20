@@ -1,0 +1,89 @@
+footer
+  @include media(lg, max)
+    margin-top: 0
+  @include media(sm, max)
+    padding-top: 300px
+  background:
+    image: url(../images/footer-bg.png)
+    size: cover
+  padding-top: 280px
+  margin-top: -125px
+  .container
+    *
+      color: $main-color
+    > h1
+      text-transform: uppercase
+    .links
+      display: flex
+      flex-wrap: wrap
+      .column
+        margin-bottom: 15px
+        h2
+          width: fit-content
+          font-weight: 400
+          padding-bottom: 5px
+          border-bottom: 2px solid $buttons-color
+        .content
+          display: flex
+          ul
+            li
+              margin: 10px 0
+              text-transform: capitalize
+    .social-media
+      @include media(md, max)
+        flex-direction: column
+        align-items: center
+      display: flex
+      justify-content: space-between
+      .icons
+        @include media(md, max)
+          margin: 15px 0 45px
+        i
+          width: 35px
+          height: 35px
+          font-size: 22px
+          display: inline-flex
+          color: #7248cc
+          padding: 10px
+          border-radius: 50%
+          background-color: $main-color
+          &:not(:last-of-type)
+            margin-right: 6px
+      .subscribe
+        @include media(sm, max)
+          flex-direction: column
+          row-gap: 15px
+        display: flex
+        align-items: center
+        span
+          font-size: 18px
+          display: inline-block
+          margin-right: 45px
+        input
+          @include media(320px, max)
+            width: 250px
+          width: 300px
+          height: 40px
+          padding-left: 15px
+          margin-right: 10px
+          border: none
+          outline: none
+        span , input
+          @include media(sm, max)
+            margin: 0
+        a
+          display: inline-block
+          background-color: $buttons-color
+          padding: 10px 50px
+          border-radius: 5px
+          text-transform: uppercase
+    p
+      @include media(sm, max)
+        width: 90%
+      font-size: 18px
+      padding: 20px 10px
+      margin: 50px auto auto
+      line-height: 1.5
+      text-align: center
+      width: 80%
+      border-top: 1px solid white
