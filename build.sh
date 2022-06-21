@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mkdir dist dist/assets dist/assets/css dist/assets/favicon dist/assets/js dist/assets/images dist/assets/languages dist/views dist/views/includes dist/views/layout
 touch dist/views/index.pug
 mkdir src src/js src/languages src/sass src/sass/abstracts src/sass/base src/sass/components src/sass/layout src/sass/pages src/sass/themes src/sass/vendors
