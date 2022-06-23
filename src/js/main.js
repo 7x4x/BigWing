@@ -85,6 +85,6 @@ _prevButton.addEventListener("click", _move.bind(null, "prev"));
 _nextButton.addEventListener("click", _move.bind(null, "next"));
 
 setInterval(() => {
-  if (window.scrollY < 100) move("next");
-  else if (window.scrollY > 4000 && window.scrollY < 4900) _move("next");
-}, 6000);
+  move("next");
+  _move("next");
+}, 5000);
